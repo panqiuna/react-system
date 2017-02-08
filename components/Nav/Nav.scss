@@ -1,0 +1,32 @@
+.title {
+    background-color: #f56564;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    height: 60px;
+    line-height: 60px;
+}
+.nav {
+    width: 300px;
+    height: 100%;
+    float: left;
+}
+.lis {
+    background-color: #32aa8f;
+}
+.lis {
+    li {
+        font-size: 16px;
+        line-height: 50px;
+        margin-bottom: 3px;
+        transition: background .3s;
+    }
+    a {
+        color: #fff;
+        display: block;
+        padding-left: 30px;
+    }
+    li:hover {
+        background-color: #5bc5b1;
+    }
+}
