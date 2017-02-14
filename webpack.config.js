@@ -7,23 +7,14 @@ let autoprefixer = require('autoprefixer');
 let cwd = process.cwd();
 
 module.exports = {
-	entry: [
-	    'webpack-dev-server/client?http://localhost:3000',
-        'webpack/hot/only-dev-server',
-		path.join(cwd, './app.js')
-	],
-	output: {
-		path: path.join(cwd, './'),
-		filename: 'dist.js',
+	entry: {
+		index: path.join(cwd, './app.js'),
+		vandor: ['react', 'react-dom'],
 	},
-    devServer: {
-        port :3000,
-        contentBase: './',
-        hot: true,
-        inline: true,
-		// historyApiFallback: true,
-		colors: true
-    },
+	output: {
+		path: path.join(cwd, '/dist/'),
+		filename: 'dist.[chunkhash:8].js',
+	},
 	module: {
 		loaders: [
 			{
@@ -48,13 +39,13 @@ module.exports = {
 			}
 		]
 	},
-	postcss: () => {
+	postcss: function() {
 		return [precss, autoprefixer];
 	},
 	plugins: [
-        new ExtractTextPlugin('style.css', {
+		new webpack.optimize.CommonsChunkPlugin('vandor',  'vendor.js'),
+        new ExtractTextPlugin('style.[chunkhash:8].css', {
         	allChunks: true
         }),
-        new webpack.HotModuleReplacementPlugin()
 	]
 }

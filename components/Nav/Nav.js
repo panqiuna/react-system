@@ -1,29 +1,30 @@
 import React, { Component } from 'react'
 import NavLi from '../NavLi/NavLi'
 import style from './Nav.scss'
+import Time from '../Time/Time'
 
 export default class extends Component{
-  render() {
+    render() {
 
-    let arr = [];
+        let arr = [];
 
-    for(let i = 0; i < 2; i++) {
-        arr.push(i);
+        for(let i = 0; i < 4; i++) {
+            arr.push(i);
+        }
+
+        let newList = arr.map((data) => {
+            return <NavLi key={ data.toString() }>列表{ data }</NavLi>;
+        })
+
+        return (
+          <div className={ style.nav }>
+            <div className={ style.title }>当前时间：<Time /></div>
+            <div className={ style.lis }>
+                <ul>
+                    { newList }
+                </ul>
+            </div>
+          </div>
+        )
     }
-
-    let newList = arr.map((data) => {
-        return <NavLi key={ data.toString() }>菜系{ data }</NavLi>;
-    })
-
-    return (
-      <div className={ style.nav }>
-        <div className={ style.title }>这里是标题哦</div>
-        <div className={ style.lis }>
-            <ul>
-                { newList }
-            </ul>
-        </div>
-      </div>
-    )
-  }
 }
