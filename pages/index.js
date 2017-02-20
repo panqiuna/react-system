@@ -1,12 +1,10 @@
 import React, { Component } from 'react'
-import Nav from '../components/Nav/Nav'
+import IndexContent from '../components/IndexContent/IndexContent'
 
 export default class extends Component{
 	render() {
 		return (
-			<div>
-				<p>index</p>
-			</div>
+			<IndexContent />
 		)
 	}
 }
