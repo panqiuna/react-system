@@ -1,11 +1,11 @@
 /*========== 全局 ==========*/
 html{overflow-y: scroll; overflow-x:hidden; _background-image:url(about:blank); _background-attachment:fixed;}
-body {font-family:"Microsoft Yahei",Arial,'Hiragino Sans GB',sans-serif; font-size:14px; color:#333333;background-color:#f9f9f9; background-color:#fff; overflow: hidden;}
+body {font-family:"Microsoft Yahei",Arial,'Hiragino Sans GB',sans-serif; font-size:14px; color:#333333; background-color:#3e536e; overflow: hidden;}
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,sup,sub{margin:0;padding:0}
 fieldset,img{border:0}
 ul,ol,li {list-style:none;}
 img{-ms-interpolation-mode: bicubic; vertical-align:top;}
-input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;outline:none; font-family:"Microsoft Yahei";}
+input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;outline:none;}
 .imgmiddle,input,select{vertical-align:middle;}
 .table{border-collapse:collapse;border-spacing:0;}
 .clear{clear:both; height:0; overflow:hidden;}
@@ -13,8 +13,8 @@ input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;
 .clearfix{zoom:1;}
 .fl{float:left; display:inline;}
 .fr{float:right; display:inline;}
-a {text-decoration:none; color:#333333;}
-a:hover{ text-decoration:none; color:#f60;}
+a {text-decoration:none;}
+a:hover{ text-decoration:none;}
 a:active{blr:expression(this.onFocus=this.blur());}
 .tc{text-align:center;}
 .tl{text-align:left;}
@@ -23,3 +23,22 @@ a:active{blr:expression(this.onFocus=this.blur());}
 .dn{display:none;}
 .op{-moz-opacity:0; opacity:0;}
 table,table td,table th{border:1px solid #e0e0e0;border-collapse:collapse;}
+
+
+.example-enter {
+  opacity: 0.01;
+    transition: opacity 500ms;
+}
+
+.example-enter.example-enter-active {
+  opacity: 1;
+}
+
+.example-leave {
+  opacity: 1;
+  transition: opacity 300ms;
+}
+
+.example-leave.example-leave-active {
+  opacity: 0;
+}
