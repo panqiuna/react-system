@@ -1,0 +1,12 @@
+.link {
+    color: #b7c0c9;
+    transition: color .3s;
+
+    &:hover {
+        color: #fff;
+    }
+}
+
+.current {
+    color: #fff;
+}

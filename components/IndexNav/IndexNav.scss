@@ -9,10 +9,11 @@
 .nav {
     width: 300px;
     height: 100%;
-    float: left;
 }
 .lis {
+    height: 640px;
     background-color: #32aa8f;
+    overflow-y: auto;    
 }
 .lis {
     li {

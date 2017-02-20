@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import NavLi from '../NavLi/NavLi'
-import style from './Nav.scss'
+import style from './IndexNav.scss'
 import Time from '../Time/Time'
 
 export default class extends Component{
@@ -8,7 +8,7 @@ export default class extends Component{
 
         let arr = [];
 
-        for(let i = 0; i < 4; i++) {
+        for(let i = 0; i < 20; i++) {
             arr.push(i);
         }
 
