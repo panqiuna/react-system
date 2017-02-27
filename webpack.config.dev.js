@@ -1,15 +1,16 @@
-let path = require('path');
-let webpack = require('webpack');
-let ExtractTextPlugin = require("extract-text-webpack-plugin");
-let precss = require('precss');
-let autoprefixer = require('autoprefixer');
+const path = require('path');
+const webpack = require('webpack');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const precss = require('precss');
+const autoprefixer = require('autoprefixer');
 
-let cwd = process.cwd();
+const cwd = process.cwd();
 
 module.exports = {
 	entry: [
 	    'webpack-dev-server/client?http://localhost:3000',
         'webpack/hot/only-dev-server',
+		'isomorphic-fetch',
 		path.join(cwd, './app.js')
 	],
 	output: {
@@ -21,18 +22,18 @@ module.exports = {
         contentBase: './',
         hot: true,
         inline: true,
-		// historyApiFallback: true,
+		// historyApiFallback: true, // 使用browserHistory，开启
 		colors: true
     },
 	module: {
 		loaders: [
 			{
 				test: /\.css$/,
-				loader: ExtractTextPlugin.extract('style', 'css?modules&importLoaders=1&localIdentName=[name]_[local]_[hash:base64:5]!postcss-loader!resolve-url-loader')
+				loader: ExtractTextPlugin.extract('style', 'css?modules&importLoaders=1&localIdentName=[name]_[local]_[hash:base64:8]!postcss-loader')
 			},
 			{
 				test: /\.scss$/,
-				loader: ExtractTextPlugin.extract('style', 'css?modules&importLoaders=1&localIdentName=[name]_[local]_[hash:base64:5]!postcss-loader!resolve-url-loader', 'sass')
+				loader: ExtractTextPlugin.extract('style', 'css?modules&importLoaders=1&localIdentName=[name]_[local]_[hash:base64:8]!postcss-loader', 'sass')
 			},
 			{
 				test: /\.js$/,
@@ -44,7 +45,7 @@ module.exports = {
 			},
 			{
 				test: /\.(svg|png|jpg|jpeg|gif)$/,
-				loader: 'url?limit=50000&name=public/[name].[hash:8].[ext]'
+				loader: 'file-loader?limit=50000&name=public/images/[name].[hash:8].[ext]'
 			}
 		]
 	},

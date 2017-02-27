@@ -1,0 +1,38 @@
+.lis {
+    overflow: hidden;
+    margin-bottom: 20px;
+    position: relative;
+
+    .img {
+        border-radius: 8px;
+        float: left;
+        width: 170px;
+        height: 110px;
+        overflow: hidden;
+    }
+
+    .add {
+        width: 34px;
+        height: 34px;
+        background: url(./images/more.png) no-repeat;
+        cursor: pointer;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translate3d(0, -50%, 0);
+    }
+}
+
+.info {
+    float: left;
+    margin-left: 20px;
+    width: 570px;
+
+    .name {
+        font-size: 22px;
+    }
+
+    .p {
+        margin-top: 10px;
+    }
+}

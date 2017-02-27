@@ -12,8 +12,8 @@ export default class extends Component{
             arr.push(i);
         }
 
-        let newList = arr.map((data) => {
-            return <NavLi key={ data.toString() }>列表{ data }</NavLi>;
+        let newList = arr.map((data, index) => {
+            return <NavLi key={ data.toString() } test={ index }>列表{ data }</NavLi>;
         })
 
         return (
