@@ -11,7 +11,7 @@ module.exports = {
 	    'webpack-dev-server/client?http://localhost:3000',
         'webpack/hot/only-dev-server',
 		'isomorphic-fetch',
-		path.join(cwd, './app.js')
+		path.join(cwd, './src/app.js')
 	],
 	output: {
 		path: path.join(cwd, './'),

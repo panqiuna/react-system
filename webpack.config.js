@@ -8,7 +8,7 @@ const cwd = process.cwd();
 
 module.exports = {
 	entry: {
-		index: path.join(cwd, './app.js'),
+		index: path.join(cwd, './src/app.js'),
 		vandor: ['react', 'react-dom', 'isomorphic-fetch'],
 	},
 	output: {

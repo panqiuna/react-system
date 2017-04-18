@@ -21,12 +21,12 @@ export default class extends Component {
                             data: data.Test,
                             status: true
                         });
-                    })
+                    });
                 } else {
                     console.log(res.status);
                 }
             })
-            .catch(error => console.log(error))
+            .catch(error => console.log(error));
     }
 
     render() {

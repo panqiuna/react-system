@@ -8,7 +8,7 @@ export default class extends Component {
 
         return (
             <li className={ style.lis }>
-                <div className={ style.img }><img src="./components/IndexList/test.jpg" /></div>
+                <div className={ style.img }><img src="./src/components/IndexList/test.jpg" /></div>
                 <div className={ style.info }>
                     <h3 className={ style.name }>{ title }</h3>
                     <p className={ style.p }>{ content }</p>

@@ -9,8 +9,8 @@ input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;
 .imgmiddle,input,select{vertical-align:middle;}
 .table{border-collapse:collapse;border-spacing:0;}
 .clear{clear:both; height:0; overflow:hidden;}
-.clearfix:after{content:"";display:block;height:0;clear:both;visibility:hidden;}
-.clearfix{zoom:1;}
+.clearfix:after{content:""; display:block; clear:both; }
+/*.clearfix{zoom:1;}*/
 .fl{float:left; display:inline;}
 .fr{float:right; display:inline;}
 a {text-decoration:none;}
